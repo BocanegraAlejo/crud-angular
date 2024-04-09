@@ -1,11 +1,13 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { CardComponent } from './card/card.component';
+import { Student } from './models/Student';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, CardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -81,24 +83,3 @@ export class AppComponent implements OnInit {
 
 
 
-export class Student {
-  id: number;
-  name: string;
-  mobileNo: string;
-  email: string;
-  city: string;
-  state: string; 
-  pincode: string;
-  address: string;
-
-  constructor() {
-    this.id = 0;
-    this.address = '';
-    this.city = '';
-    this.email = '';
-    this.mobileNo = '';
-    this.name = '';
-    this.state = '';
-    this.pincode = '';
-  }
-}
